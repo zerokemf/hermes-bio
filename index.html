@@ -150,6 +150,10 @@
       font-weight: 800;
     }
 
+    .model-title {
+      font-size: clamp(2.35rem, 4.4vw, 3.6rem);
+    }
+
     .hero-title {
       font-size: clamp(3.25rem, 6.2vw, 5.25rem);
       line-height: 1.04;
@@ -208,6 +212,20 @@
     .capability-card:hover {
       transform: translateY(-6px);
       box-shadow: var(--shadow);
+    }
+
+    .model-card {
+      border-radius: 8px;
+      overflow: hidden;
+      background: color-mix(in srgb, var(--surface) 88%, transparent);
+      border: 1px solid var(--line);
+    }
+
+    .model-card img {
+      aspect-ratio: 16 / 9;
+      width: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .step-line {
@@ -286,11 +304,53 @@
       nav,
       footer {
         max-width: 100vw;
+        overflow-x: hidden;
+      }
+
+      main .max-w-7xl,
+      main .max-w-6xl,
+      main .max-w-4xl,
+      main .max-w-3xl,
+      main .max-w-2xl {
+        max-width: 100%;
+      }
+
+      main *,
+      section * {
+        min-width: 0;
+      }
+
+      section > div,
+      .model-card,
+      .surface,
+      .soft-surface,
+      .capability-card,
+      .code-window {
+        max-width: 100%;
+      }
+
+      p,
+      h2,
+      h3 {
+        overflow-wrap: anywhere;
+      }
+
+      img {
+        max-width: 100%;
       }
 
       .hero-title {
         font-size: clamp(2.45rem, 12vw, 3rem);
         line-height: 1.05;
+      }
+
+      .section-title {
+        font-size: clamp(1.95rem, 9.6vw, 2.45rem);
+        line-height: 1.1;
+      }
+
+      .model-title {
+        font-size: clamp(1.95rem, 9.6vw, 2.4rem);
       }
 
       .hero-copy {
@@ -304,6 +364,27 @@
       .button-secondary {
         width: 100%;
         max-width: 100%;
+      }
+
+      .ticker {
+        mask-image: none;
+      }
+
+      .ticker-track {
+        animation: none;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.75rem;
+        width: 100% !important;
+        transform: none !important;
+      }
+
+      .ticker-track span {
+        text-align: center;
+      }
+
+      .ticker-track span:nth-child(n + 7) {
+        display: none;
       }
     }
   </style>
@@ -322,6 +403,7 @@
       <div class="hidden items-center gap-7 text-sm font-medium text-[var(--muted)] md:flex">
         <a class="hover:text-[var(--text)]" href="#agent">AI 代理人</a>
         <a class="hover:text-[var(--text)]" href="#capabilities">能力</a>
+        <a class="hover:text-[var(--text)]" href="#models">模型應用</a>
         <a class="hover:text-[var(--text)]" href="#goal">Goal 指令</a>
         <a class="hover:text-[var(--text)]" href="#case">案例</a>
       </div>
@@ -383,7 +465,11 @@
         <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div class="reveal">
             <p class="section-kicker mb-4">What is an AI Agent</p>
-            <h2 class="section-title">AI 代理人，是能使用工具的工作夥伴。</h2>
+            <h2 class="section-title">
+              <span class="block">AI 代理人，是</span>
+              <span class="block">能使用工具的</span>
+              <span class="block">工作夥伴。</span>
+            </h2>
           </div>
           <p class="max-w-3xl text-lg leading-8 text-[var(--muted)] reveal">
             一般聊天機器人主要回答問題；AI 代理人會進一步建立計畫、操作工具、檢查結果，必要時修正做法。你給它方向，它會把方向變成任務，把任務變成檔案、程式、設計稿或報告。
@@ -414,7 +500,11 @@
       <div class="mx-auto max-w-7xl">
         <div class="mx-auto max-w-4xl text-center reveal">
           <p class="section-kicker mb-4">Capabilities</p>
-          <h2 class="section-title">Hermes 能把零散需求，變成可執行的成果。</h2>
+          <h2 class="section-title">
+            <span class="block">Hermes 能把</span>
+            <span class="block">零散需求，</span>
+            <span class="block">變成可執行的成果。</span>
+          </h2>
           <p class="mt-6 text-lg leading-8 text-[var(--muted)]">從研究、設計、程式到內容生產，Hermes 會依任務選工具、補脈絡、驗證輸出。</p>
         </div>
 
@@ -446,6 +536,61 @@
             </div>
             <h3 class="text-2xl font-bold">自動化任務</h3>
             <p class="mt-4 leading-7 text-[var(--muted)]">把重複流程變成指令、排程或工作管線，降低人工追蹤成本。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="models" class="px-5 py-16 md:px-8 md:py-20">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-8 lg:grid-cols-2 lg:items-end">
+          <div class="reveal">
+            <p class="section-kicker mb-4">Model-powered work</p>
+            <h2 class="section-title model-title">
+              <span class="block">模型不是單一功能，</span>
+              <span class="block">是 Hermes 的工具箱。</span>
+            </h2>
+          </div>
+          <p class="max-w-3xl text-lg leading-8 text-[var(--muted)] reveal">
+            Hermes 會依照任務選擇合適模型與工具：文字模型負責推理與文案，程式模型處理專案與測試，多模態模型協助圖片、簡報與媒體，自動化流程則把成果串成可交付工作。
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-5 md:grid-cols-2">
+          <article class="model-card reveal">
+            <img src="assets/hermes-research.webp" alt="Hermes 使用模型整理研究資料、儀表板與來源分析" loading="lazy">
+            <div class="p-6">
+              <p class="text-sm font-bold uppercase text-[var(--blue)]">Research model</p>
+              <h3 class="mt-2 text-2xl font-bold">查資料、比來源、整理成洞察</h3>
+              <p class="mt-3 leading-7 text-[var(--muted)]">把零散網頁、報告、數據與摘要整理成可讀結論，適合市場研究、技術調查與決策前分析。</p>
+            </div>
+          </article>
+
+          <article class="model-card reveal">
+            <img src="assets/hermes-code.webp" alt="Hermes 使用程式模型檢查程式碼、測試狀態與開發流程" loading="lazy">
+            <div class="p-6">
+              <p class="text-sm font-bold uppercase text-[var(--green)]">Coding model</p>
+              <h3 class="mt-2 text-2xl font-bold">讀專案、改程式、驗證結果</h3>
+              <p class="mt-3 leading-7 text-[var(--muted)]">從 repo 結構到前端畫面、測試輸出與部署狀態，Hermes 可以把程式任務推到可驗收。</p>
+            </div>
+          </article>
+
+          <article class="model-card reveal">
+            <img src="assets/hermes-creative.webp" alt="Hermes 使用多模態模型生成視覺、簡報、圖片方向與媒體素材" loading="lazy">
+            <div class="p-6">
+              <p class="text-sm font-bold uppercase text-[var(--orange)]">Multimodal model</p>
+              <h3 class="mt-2 text-2xl font-bold">做圖、簡報、文案與媒體素材</h3>
+              <p class="mt-3 leading-7 text-[var(--muted)]">把抽象需求轉成視覺方向、頁面文案、簡報草稿與圖片素材，讓內容產出更完整。</p>
+            </div>
+          </article>
+
+          <article class="model-card reveal">
+            <img src="assets/hermes-automation.webp" alt="Hermes 使用模型追蹤長任務、自動化流程與交付進度" loading="lazy">
+            <div class="p-6">
+              <p class="text-sm font-bold uppercase text-[var(--pink)]">Automation model</p>
+              <h3 class="mt-2 text-2xl font-bold">追蹤 goal、排流程、交付成果</h3>
+              <p class="mt-3 leading-7 text-[var(--muted)]">把長任務拆成階段，持續追蹤進度、整理檔案、回報狀態，直到有明確產出。</p>
+            </div>
           </article>
         </div>
       </div>
@@ -564,6 +709,7 @@
       <p>© <span id="year"></span> Hermes. Built as a focused AI agent introduction.</p>
       <div class="flex gap-5">
         <a class="hover:text-[var(--text)]" href="#agent">AI 代理人</a>
+        <a class="hover:text-[var(--text)]" href="#models">模型應用</a>
         <a class="hover:text-[var(--text)]" href="#goal">Goal 指令</a>
         <a class="hover:text-[var(--text)]" href="#case">案例</a>
       </div>
