@@ -711,49 +711,125 @@
 
     <section id="case" class="bg-[var(--surface-soft)] px-5 py-16 md:px-8 md:py-20">
       <div class="mx-auto max-w-7xl">
-        <div class="mx-auto max-w-4xl text-center reveal">
-          <p class="section-kicker mb-4">Real Case</p>
-          <h2 class="section-title">一個實際案例：從想法到可上線網頁。</h2>
+        <div class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+          <div class="reveal">
+            <p class="section-kicker mb-4">Real Projects</p>
+            <h2 class="section-title">
+              <span class="block">不是展示概念，</span>
+              <span class="block">是已經做出來的成果。</span>
+            </h2>
+          </div>
+          <p class="max-w-3xl text-lg leading-8 text-[var(--muted)] reveal">
+            這些公開專案展示 Hermes 可以協助完成的工作型態：從單頁商務網站、互動遊戲、設計工具，到桌面小工具與本站本身。重點不是只產生靈感，而是把需求推進到可開啟、可操作、可驗收的作品。
+          </p>
         </div>
 
-        <div class="mx-auto mt-14 max-w-4xl space-y-8">
-          <div class="relative flex gap-5 reveal">
-            <div class="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[var(--blue)] font-bold text-white">
-              1
-              <span class="step-line" aria-hidden="true"></span>
-            </div>
-            <div>
-              <h3 class="text-2xl font-bold">讀懂現況</h3>
-              <p class="mt-2 leading-7 text-[var(--muted)]">Hermes 先檢查專案結構、現有文案、設計風格與部署方式，避免一開始就亂改。</p>
-            </div>
+        <div class="mt-10 grid gap-4 md:grid-cols-3 reveal">
+          <div class="surface rounded-lg p-6">
+            <p class="text-4xl font-extrabold text-[var(--blue)]">6</p>
+            <p class="mt-2 font-bold">公開 GitHub 專案</p>
+            <p class="mt-2 text-sm leading-6 text-[var(--muted)]">涵蓋 HTML、JavaScript、Python 與靜態網站部署。</p>
           </div>
-          <div class="relative flex gap-5 reveal">
-            <div class="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[var(--green)] font-bold text-white">
-              2
-              <span class="step-line" aria-hidden="true"></span>
-            </div>
-            <div>
-              <h3 class="text-2xl font-bold">重建敘事</h3>
-              <p class="mt-2 leading-7 text-[var(--muted)]">把焦點從私人記憶移到「AI 代理人是什麼、Hermes 能做什麼、goal 指令怎麼用」。</p>
-            </div>
+          <div class="surface rounded-lg p-6">
+            <p class="text-4xl font-extrabold text-[var(--green)]">4</p>
+            <p class="mt-2 font-bold">可直接線上體驗</p>
+            <p class="mt-2 text-sm leading-6 text-[var(--muted)]">GitHub Pages 作品可直接開啟，不只停留在 repo。</p>
           </div>
-          <div class="relative flex gap-5 reveal">
-            <div class="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[var(--orange)] font-bold text-white">
-              3
-              <span class="step-line" aria-hidden="true"></span>
-            </div>
-            <div>
-              <h3 class="text-2xl font-bold">設計與實作</h3>
-              <p class="mt-2 leading-7 text-[var(--muted)]">建立乾淨、明亮、有層次的介面：清楚標題、細緻留白、半透明導覽、滾動進場與產品視覺。</p>
-            </div>
+          <div class="surface rounded-lg p-6">
+            <p class="text-4xl font-extrabold text-[var(--orange)]">∞</p>
+            <p class="mt-2 font-bold">從想法到交付</p>
+            <p class="mt-2 text-sm leading-6 text-[var(--muted)]">依需求補文案、寫程式、修錯、部署、再迭代。</p>
           </div>
-          <div class="relative flex gap-5 reveal">
-            <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[var(--pink)] font-bold text-white">4</div>
-            <div>
-              <h3 class="text-2xl font-bold">驗證與交付</h3>
-              <p class="mt-2 leading-7 text-[var(--muted)]">在桌面與手機寬度檢查版面、互動與可讀性，最後交付可直接部署的靜態網站。</p>
+        </div>
+
+        <div class="mt-14 grid gap-5 lg:grid-cols-2">
+          <article class="surface rounded-lg p-6 reveal">
+            <div class="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <p class="text-sm font-bold uppercase text-[var(--blue)]">Business website</p>
+                <h3 class="mt-2 text-2xl font-bold">嘉寀萌商務中心 CTMEBC</h3>
+              </div>
+              <span class="rounded-full border border-[var(--line)] px-3 py-1 text-xs font-bold text-[var(--muted)]">HTML / Tailwind / GSAP</span>
             </div>
-          </div>
+            <p class="mt-4 leading-7 text-[var(--muted)]">高質感商務中心形象頁：深色精品視覺、金色品牌語彙、動態游標與滾動動畫，適合展示「把商業需求轉成可上線網站」的能力。</p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a class="button-primary inline-flex items-center justify-center px-5 py-2 text-sm font-bold" href="https://zerokemf.github.io/ctmebc/" target="_blank" rel="noopener">開啟作品</a>
+              <a class="button-secondary inline-flex items-center justify-center px-5 py-2 text-sm font-bold" href="https://github.com/zerokemf/ctmebc" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
+
+          <article class="surface rounded-lg p-6 reveal">
+            <div class="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <p class="text-sm font-bold uppercase text-[var(--green)]">Game development</p>
+                <h3 class="mt-2 text-2xl font-bold">Tetris Battle — SRS Edition</h3>
+              </div>
+              <span class="rounded-full border border-[var(--line)] px-3 py-1 text-xs font-bold text-[var(--muted)]">JavaScript / Canvas / Web Audio</span>
+            </div>
+            <p class="mt-4 leading-7 text-[var(--muted)]">完整俄羅斯方塊遊戲：7-Bag 隨機、SRS 旋轉、Ghost Piece、Hold、粒子特效、震動回饋與 Web Audio 即時音效，展示複雜互動邏輯與體驗打磨。</p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a class="button-primary inline-flex items-center justify-center px-5 py-2 text-sm font-bold" href="https://zerokemf.github.io/tetris-battle/" target="_blank" rel="noopener">開啟作品</a>
+              <a class="button-secondary inline-flex items-center justify-center px-5 py-2 text-sm font-bold" href="https://github.com/zerokemf/tetris-battle" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
+
+          <article class="surface rounded-lg p-6 reveal">
+            <div class="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <p class="text-sm font-bold uppercase text-[var(--orange)]">Browser game</p>
+                <h3 class="mt-2 text-2xl font-bold">經典接龍 Klondike Solitaire</h3>
+              </div>
+              <span class="rounded-full border border-[var(--line)] px-3 py-1 text-xs font-bold text-[var(--muted)]">Vanilla JS / LocalStorage</span>
+            </div>
+            <p class="mt-4 leading-7 text-[var(--muted)]">無框架接龍遊戲：拖曳操作、有解局號、死局偵測、無限復原、提示、統計、自動存檔與明暗主題，展現規則系統與狀態管理能力。</p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a class="button-primary inline-flex items-center justify-center px-5 py-2 text-sm font-bold" href="https://zerokemf.github.io/solitaire-original/" target="_blank" rel="noopener">開啟作品</a>
+              <a class="button-secondary inline-flex items-center justify-center px-5 py-2 text-sm font-bold" href="https://github.com/zerokemf/solitaire-original" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
+
+          <article class="surface rounded-lg p-6 reveal">
+            <div class="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <p class="text-sm font-bold uppercase text-[var(--pink)]">Design tool</p>
+                <h3 class="mt-2 text-2xl font-bold">Willie_QRcode 設計工具</h3>
+              </div>
+              <span class="rounded-full border border-[var(--line)] px-3 py-1 text-xs font-bold text-[var(--muted)]">HTML / QR / SVG Export</span>
+            </div>
+            <p class="mt-4 leading-7 text-[var(--muted)]">可客製資料點、定位點、Logo 與容錯率的 QR Code 工具，支援 PNG / SVG 輸出。這類小工具很適合把設計師工作流程產品化。</p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a class="button-primary inline-flex items-center justify-center px-5 py-2 text-sm font-bold" href="https://zerokemf.github.io/Willie_QRcode/" target="_blank" rel="noopener">開啟作品</a>
+              <a class="button-secondary inline-flex items-center justify-center px-5 py-2 text-sm font-bold" href="https://github.com/zerokemf/Willie_QRcode" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
+
+          <article class="surface rounded-lg p-6 reveal">
+            <div class="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <p class="text-sm font-bold uppercase text-[var(--blue)]">Desktop utility</p>
+                <h3 class="mt-2 text-2xl font-bold">YouTube Downloader GUI</h3>
+              </div>
+              <span class="rounded-full border border-[var(--line)] px-3 py-1 text-xs font-bold text-[var(--muted)]">Python / Tkinter / yt-dlp</span>
+            </div>
+            <p class="mt-4 leading-7 text-[var(--muted)]">用 Python Tkinter 封裝 yt-dlp 與 ffmpeg 流程，提供網址輸入、路徑選擇、下載狀態與錯誤提示，展示 Hermes 能協助把命令列流程變成一般人可用的工具。</p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a class="button-secondary inline-flex items-center justify-center px-5 py-2 text-sm font-bold" href="https://github.com/zerokemf/youtube-downloader" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
+
+          <article class="surface rounded-lg p-6 reveal">
+            <div class="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <p class="text-sm font-bold uppercase text-[var(--green)]">Meta case</p>
+                <h3 class="mt-2 text-2xl font-bold">Hermes Bio 本站</h3>
+              </div>
+              <span class="rounded-full border border-[var(--line)] px-3 py-1 text-xs font-bold text-[var(--muted)]">HTML / Tailwind / Storytelling</span>
+            </div>
+            <p class="mt-4 leading-7 text-[var(--muted)]">本站本身就是案例：從定位、文案、視覺敘事、響應式版面，到 GitHub 更新流程，示範 Hermes 如何把抽象介紹整理成可公開分享的網站。</p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a class="button-secondary inline-flex items-center justify-center px-5 py-2 text-sm font-bold" href="https://github.com/zerokemf/hermes-bio" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
